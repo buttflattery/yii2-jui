@@ -34,7 +34,7 @@ class DatePickerLanguageAsset extends AssetBundle
      * {@inheritdoc}
      */
     public $depends = [
-        'yii\jui\JuiAsset',
+        JuiAsset::class,
     ];
 
 

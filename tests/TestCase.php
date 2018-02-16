@@ -1,6 +1,6 @@
 <?php
 
-namespace yiiunit\extensions\jui;
+namespace yiiunit\jui;
 
 use yii\di\Container;
 use yii\helpers\ArrayHelper;
@@ -11,6 +11,9 @@ use Yii;
  */
 abstract class TestCase extends \PHPUnit\Framework\TestCase
 {
+    /**
+     * {@inheritdoc}
+     */
     protected function setUp()
     {
         parent::setUp();
@@ -31,7 +34,7 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
      * @param array $config
      * @param string $appClass
      */
-    protected function mockWebApplication($config = [], $appClass = '\yii\web\Application')
+    protected function mockWebApplication($config = [], $appClass = \yii\web\Application::class)
     {
         new $appClass(ArrayHelper::merge([
             'id' => 'testapp',

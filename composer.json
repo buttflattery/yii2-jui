@@ -30,7 +30,7 @@
         }
     ],
     "require": {
-        "yiisoft/yii2": "~2.0.4",
+        "yiisoft/yii2": "2.1.x-dev",
         "bower-asset/jquery-ui": "~1.12.1"
     },
     "repositories": [
@@ -43,6 +43,9 @@
         "psr-4": {
             "yii\\jui\\": "src"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {"yiiunit\\jui\\": "tests/"}
     },
     "extra": {
         "branch-alias": {

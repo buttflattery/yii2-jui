@@ -35,6 +35,6 @@ class JuiAsset extends AssetBundle
      * {@inheritdoc}
      */
     public $depends = [
-        'yii\web\JqueryAsset',
+        \yii\jquery\JqueryAsset::class,
     ];
 }

@@ -1,5 +1,6 @@
 <?php
-namespace yiiunit\extensions\jui;
+
+namespace yiiunit\jui;
 
 use Yii;
 use yii\jui\Selectable;
@@ -18,7 +19,7 @@ class SelectableTest extends TestCase
         $this->mockWebApplication([
             'components' => [
                 'assetManager' => [
-                    'basePath' => '@yiiunit/extensions/jui/data/web/assets',
+                    'basePath' => '@yiiunit/jui/data/web/assets',
                     'baseUrl' => '/assets',
                     'appendTimestamp' => true,
                 ],
@@ -53,7 +54,7 @@ class SelectableTest extends TestCase
         Selectable::end();
         $out .= ob_get_clean();
 
-        $out = Yii::$app->view->renderFile('@yiiunit/extensions/jui/data/views/layout.php', [
+        $out = Yii::$app->view->renderFile('@yiiunit/jui/data/views/layout.php', [
             'content' => $out,
         ]);
 
@@ -63,7 +64,7 @@ class SelectableTest extends TestCase
             $out,
             'There should be a div with class myselectableitems enclosing html between begin()` and `end()` methods');
         static::assertRegExp(
-            '~<script type="text/javascript">jQuery\(function \(\$\) \{\njQuery\(\'#myselectableitems\'\)\.selectable\(\{\"filter"\:"myselectableitem","tolerance"\:"touch"\}\);\n\}\);</script>~',
+            '~<script type="text/javascript">jQuery\(\'#myselectableitems\'\)\.selectable\(\{\"filter"\:"myselectableitem","tolerance"\:"touch"\}\);</script>~',
             $out,
             'There should be the jQuery UI Selectable plugin initialization for myselectableitems');
     }

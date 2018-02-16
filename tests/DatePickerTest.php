@@ -1,5 +1,6 @@
 <?php
-namespace yiiunit\extensions\jui;
+
+namespace yiiunit\jui;
 
 use Yii;
 use yii\jui\DatePicker;
@@ -22,7 +23,7 @@ class DatePickerTest extends TestCase
         $this->mockWebApplication([
             'components' => [
                 'assetManager' => [
-                    'basePath' => '@yiiunit/extensions/jui/data/web/assets',
+                    'basePath' => '@yiiunit/jui/data/web/assets',
                     'baseUrl' => '/assets',
                     'appendTimestamp' => true,
                 ],
@@ -37,7 +38,7 @@ class DatePickerTest extends TestCase
             'dateFormat' => 'yyyy-MM-dd',
         ]);
 
-        $out = Yii::$app->view->renderFile('@yiiunit/extensions/jui/data/views/layout.php', [
+        $out = Yii::$app->view->renderFile('@yiiunit/jui/data/views/layout.php', [
             'content' => $out,
         ]);
 
@@ -68,7 +69,7 @@ class DatePickerTest extends TestCase
         $this->mockWebApplication([
             'components' => [
                 'assetManager' => [
-                    'basePath' => '@yiiunit/extensions/jui/data/web/assets',
+                    'basePath' => '@yiiunit/jui/data/web/assets',
                     'baseUrl' => '/assets',
                 ],
             ]

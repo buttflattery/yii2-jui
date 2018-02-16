@@ -14,7 +14,7 @@ In this situation there are 3 components that play together:
 First, we add the date picker input field to the form by using the [[yii\widgets\ActiveField::widget()|widget()]] method of the form field:
 
 ```php
-<?= $form->field($model, 'deadline')->widget(\yii\jui\DatePicker::className(), [
+<?= $form->field($model, 'deadline')->widget(\yii\jui\DatePicker::class, [
     // if you are using bootstrap, the following line will set the correct style of the input field
     'options' => ['class' => 'form-control'],
     // ... you can configure more DatePicker properties here
