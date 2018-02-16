@@ -14,7 +14,7 @@ php composer.phar require --prefer-dist yiisoft/yii2-jui
 or add
 
 ```
-"yiisoft/yii2-jui": "~2.0.0"
+"yiisoft/yii2-jui": "~2.1.0"
 ```
 
 to the require section of your `composer.json` file.

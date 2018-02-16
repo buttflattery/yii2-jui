@@ -105,14 +105,14 @@ return [
         'assetManager' => [
             // override bundles to use CDN :
             'bundles' => [
-                'yii\jui\JuiAsset' => [
+                yii\jui\JuiAsset::class => [
                     'sourcePath' => null,
                     'baseUrl' => 'https://code.jquery.com/ui/1.12.1',
                     'js' => [
                         'jquery-ui.min.js'
                     ],
                 ],
-                'yii\jui\DatePickerLanguageAsset' => [
+                yii\jui\DatePickerLanguageAsset::class => [
                     'sourcePath' => null,
                     'baseUrl' => 'https://code.jquery.com/ui/1.12.1',
                 ],
