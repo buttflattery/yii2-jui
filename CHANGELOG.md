@@ -1,10 +1,11 @@
 Yii Framework 2 jui extension Change Log
 ========================================
 
-2.0.8 under development
+2.1.0 under development
 -----------------------
 
-- no changes in this release.
+- Chg: Required Yii framework version has been raised to '2.1.0' (klimov-paul)
+- Chg: Assets source has been changed from Bower to NPM, e.g to "npm-asset/jquery-ui" repository (klimov-paul)
 
 
 2.0.7 November 25, 2017

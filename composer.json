@@ -29,9 +29,11 @@
             "email": "sam@rmcreative.ru"
         }
     ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
-        "yiisoft/yii2": "2.1.x-dev",
-        "bower-asset/jquery-ui": "~1.12.1"
+        "yiisoft/yii2-jquery": "1.0.x-dev",
+        "npm-asset/jquery-ui": "~1.12.1"
     },
     "repositories": [
         {
@@ -45,7 +47,9 @@
         }
     },
     "autoload-dev": {
-        "psr-4": {"yiiunit\\jui\\": "tests/"}
+        "psr-4": {
+            "yiiunit\\jui\\": "tests"
+        }
     },
     "extra": {
         "branch-alias": {
